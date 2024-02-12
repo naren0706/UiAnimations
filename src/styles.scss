@@ -1,1 +1,120 @@
 /* You can add global styles to this file, and also import other style files */
+// @import url("https://fonts.googleapis.com/css2?family=Honk&display=swap");
+// font-family: "Honk", system-ui;
+
+@import url("https://fonts.googleapis.com/css2?family=Honk&family=Kalam:wght@300;400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  // font-family: Sharpgroteskbook25, sans-serif;
+  font-family: "Kalam", cursive;
+  // font-weight: 400;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-size: 62.5%;
+  @media screen and (min-width: 0px) and (max-width: 600px) {
+    & {
+      // font-size: 30%;
+    }
+  }
+  @media screen and (min-width: 600px) and (max-width: 1023px) {
+    & {
+      // font-size: 50%;
+    }
+  }
+}
+body {
+  margin: 0;
+  // font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    // transform: translateX(1rem);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80% {
+    // transform: translateX(-1rem);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes moveInRightTree {
+  0% {
+    opacity: 0;
+    transform: translateX(70%);
+  }
+  100% {
+    transform: translateX(50%);
+    opacity: 1;
+  }
+}
+@keyframes grassAnimation {
+  0% {
+    opacity: 0;
+    bottom: -10rem;
+  }
+  100% {
+    // transform: translateX(50%);
+    opacity: 1;
+    bottom: -5rem;
+  }
+}
+@keyframes titleAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes dashboardAnimation {
+  0% {
+    opacity: 0;
+    top: -10rem;
+  }
+  80% {
+    top: 0.5rem;
+  }
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}

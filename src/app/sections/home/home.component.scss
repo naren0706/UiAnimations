@@ -1,0 +1,247 @@
+$animation_time: 4s;
+.home {
+  &-container {
+    height: 100vh;
+    background-image: url("../../../assets/house.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+
+    position: relative;
+  }
+}
+.title {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12rem;
+  color: #fff;
+  animation: titleAnimation $animation_time;
+  animation-delay: 3s;
+  animation-fill-mode: backwards;
+}
+
+.left {
+  &-image {
+    position: relative;
+  }
+  &-branch {
+    opacity: 0;
+    &-group {
+      position: absolute;
+      &-sub {
+        position: relative;
+        & > * {
+          position: absolute;
+        }
+      }
+    }
+    &--1 {
+      mix-blend-mode: color-burn;
+      animation: moveInLeft $animation_time;
+      top: -20rem;
+      left: -20rem;
+      @media screen and (min-width: 750px) and (max-width: 1300px) {
+        & {
+          // top: -25rem;
+          // left: -25rem;
+        }
+      }
+      @media screen and (max-width: 750px) {
+        & {
+          top: -22rem;
+          left: -22rem;
+        }
+      }
+    }
+    &--2 {
+      animation: moveInLeft $animation_time;
+      mix-blend-mode: darken;
+      top: -18rem;
+      left: -19rem;
+      @media screen and (max-width: 750px) {
+        & {
+          top: -20rem;
+          left: -21rem;
+        }
+      }
+    }
+  }
+  &-tree {
+    &-group {
+      position: relative;
+      & > * {
+        position: absolute;
+        @media screen and (min-width: 750px) and (max-width: 1300px) {
+          & {
+          }
+        }
+        @media screen and (max-width: 750px) {
+          & {
+          }
+        }
+        @media screen and (max-width: 440px) {
+          & {
+          }
+        }
+      }
+    }
+    &--1 {
+      // position: absolute;
+      mix-blend-mode: color-burn;
+      top: -10rem;
+      left: 0;
+      animation: moveInLeft 1s;
+      @media screen and (max-width: 750px) {
+        & {
+          transform: translate(-20%, -10%);
+        }
+      }
+    }
+    &--2 {
+      // position: absolute;
+      mix-blend-mode: color-burn;
+      left: 15rem;
+      top: 15rem;
+      animation: moveInLeft 1.5s;
+      @media screen and (max-width: 750px) {
+        & {
+          transform: translate(-20%, -10%);
+        }
+      }
+    }
+    &--3 {
+      // position: absolute;
+      mix-blend-mode: multiply;
+      left: 25rem;
+      top: 23.5rem;
+      animation: moveInLeft 2s;
+      @media screen and (max-width: 750px) {
+        & {
+          transform: translate(-20%, -10%);
+        }
+      }
+    }
+  }
+}
+.image {
+  &-tree {
+    height: 1000px;
+    transform: translateX(-50%);
+    mix-blend-mode: color-burn;
+  }
+  &-branch {
+    height: 60rem;
+    // mix-blend-mode: multiply;
+  }
+}
+.right {
+  &-image {
+    position: relative;
+  }
+  &-branch {
+    &-group {
+      position: relative;
+      & > * {
+        // background-color: pink;
+        position: absolute;
+      }
+    }
+    &--1 {
+      right: 0;
+      mix-blend-mode: color-burn;
+      // opacity: 0.6;
+      top: -20rem;
+      right: -20rem;
+      // transform: translate(12rem, -16rem);
+      animation: moveInRight $animation_time;
+      @media screen and (max-width: 750px) {
+        & {
+          top: -22rem;
+          right: -22rem;
+        }
+      }
+    }
+    &--2 {
+      right: 0;
+      mix-blend-mode: darken;
+      top: -18rem;
+      right: -19rem;
+      animation: moveInRight $animation_time;
+      @media screen and (max-width: 750px) {
+        & {
+          top: -20rem;
+          right: -21rem;
+        }
+      }
+    }
+  }
+  &-tree {
+    &-group {
+      & > * {
+        position: absolute;
+        transform: translateX(50%);
+        @media screen and (min-width: 750px) and (max-width: 1300px) {
+          & {
+          }
+        }
+        @media screen and (min-width: 440px) and (max-width: 750px) {
+          & {
+          }
+        }
+        @media screen and (max-width: 440px) {
+          & {
+          }
+        }
+      }
+    }
+    &--1 {
+      mix-blend-mode: color-burn;
+      top: -10rem;
+      right: 6rem;
+      animation: moveInRightTree 1s;
+      @media screen and (max-width: 750px) {
+        & {
+          right: -6rem;
+        }
+      }
+    }
+    &--2 {
+      top: 15rem;
+      right: 25rem;
+      mix-blend-mode: color-burn;
+      animation: moveInRightTree 1.5s;
+      @media screen and (max-width: 750px) {
+        & {
+          right: 6rem;
+        }
+      }
+    }
+    &--3 {
+      top: 23.5rem;
+      mix-blend-mode: multiply;
+      right: 35rem;
+      animation: moveInRightTree 2s;
+      @media screen and (max-width: 750px) {
+        & {
+          right: 12rem;
+        }
+      }
+    }
+  }
+}
+
+.grass {
+  animation: grassAnimation $animation_time;
+
+  position: absolute;
+  // z-index: 1234567890;
+  bottom: -5rem;
+  mix-blend-mode: color-burn;
+  display: flex;
+  &--image {
+    background-size: cover;
+  }
+}
